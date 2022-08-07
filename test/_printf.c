@@ -10,11 +10,11 @@ int _printf(const char *format, ...)
 	int a = 0;
 	int b = 0;
 
-	if (format !='\0')
+	while (format[a])
 	{
 		_putchar(format[a]);
-		a++;
 		b++;
+		a++;
 	}
 
 	return (b);
