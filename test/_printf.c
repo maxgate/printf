@@ -24,30 +24,20 @@ int _printf(const char *format, ...)
 						b += _printChar(args);
 						a += 2;
 						break;
-
-					default:
-						_putchar(format[a]);
-						_putchar(format[a + 1]);
-						a +=2;
-				}
-			}
-
-	_putchar(format[a]);
-	b++;
-	a++;
-}
-
-			switch (format[a + 1])
-					{
 					case 's':
 						b += _printStr(args);
 						a += 2;
 						break;
-					default:
-						_putchar(format[a]); 
-						_putchar(format[a + 1]);
+					case '%':
+						_putchar('%');
+						b++;
 						a += 2;
-					}
+						break;
+					default:
+						_putchar(format[a]);
+						_putchar(format[a + 1]);
+						a +=2;
+			}
 		}
 		
 		if (format[a])
