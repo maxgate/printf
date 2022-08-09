@@ -37,9 +37,11 @@ typedef struct buffer_s
 
 /**
  * struct converter_s - A new type defining a converter struct.
+ * int: type of pointer to the function func
  * @specifier: A character representing a conversion specifier.
  * @func: A pointer to a conversion function corresponding to specifier.
  */
+
 typedef struct converter_s
 {
 	unsigned char specifier;
@@ -89,6 +91,12 @@ unsigned int convert_R(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 
 /* Handlers */
+/**
+ * handle_specifiers - handle string with identifiers
+ * @index: pointer to an int
+ * @flags: pointer to astring
+ * Return: nothing
+ */
 unsigned char handle_flags(const char *flags, char *index);
 unsigned char handle_length(const char *modifier, char *index);
 int handle_width(va_list args, const char *modifier, char *index);

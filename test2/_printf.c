@@ -34,7 +34,11 @@ int _printf(const char *format, ...)
 						a += 2;
 						break;
 					case 'i':
-						b += _printInt(args);
+						b += _print_int(args);
+						a += 2;
+						break;
+					case 'd':
+						b += _print_dec(args);
 						a += 2;
 						break;
 					default:
