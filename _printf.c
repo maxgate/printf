@@ -3,7 +3,7 @@
 /**
  * _printf - prints anything
  * @format: the format string
- * Return; returns the number of characters printed
+ * Return: returns the number of characters printed
  */
 
 int _printf(const char *format, ...)
@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	{
 		while (format[a] == '%')
 		{
-			switch(format[a + 1])
+			switch (format[a + 1])
 			{
 					case 'c':
 						b += _printChar(args);
@@ -36,10 +36,9 @@ int _printf(const char *format, ...)
 					default:
 						_putchar(format[a]);
 						_putchar(format[a + 1]);
-						a +=2;
+						a += 2;
 			}
 		}
-		
 		if (format[a])
 		{
 			_putchar(format[a]);

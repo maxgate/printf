@@ -1,8 +1,10 @@
 #include"main.h"
 
 /**
- * _puts: print string
+ * _puts - print string
  * @str: pointer to the string to be printed
+ *
+ * Description: print string to the standard output
  * Return: number of character printed
  */
 int _puts(char *str)
@@ -18,8 +20,11 @@ int _puts(char *str)
 }
 
 /**
- * _printStr: print string with identifier
- * Return:  string to print 
+ * _printStr - print string using identifier
+ * @args: variadic variable
+ *
+ * Description: print string using identifier %s
+ * Return:  string to print
  */
 
 int _printStr(va_list args)
