@@ -33,6 +33,10 @@ int _printf(const char *format, ...)
 						b++;
 						a += 2;
 						break;
+					case 'i':
+						b += _printInt(args);
+						a += 2;
+						break;
 					default:
 						_putchar(format[a]);
 						_putchar(format[a + 1]);
